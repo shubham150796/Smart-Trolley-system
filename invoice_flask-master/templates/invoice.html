@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- <form>
+    <div class="input-group">
+      <input class="form-control" type="text" required name="custFirstName" placeholder="First Name"></input>
+      <input class="form-control" type="text" required name="custLastName" placeholder="Last Name"></input>
+    <div>
+    <div>
+      <input class="form-control" type="number" required name="invnum" value="100"></input>
+    </div>
+
+
+    <input type="submit" value="Create Invoice"/>
+    </form> -->
+  
+  <div class="container-fluid">
+  <ul id="savedWell" class="col-md-2 well">
+    <li><strong>Saved Invoices</strong></li>
+    <li class="divider"></li>
+  </ul>
+  <div class="col-md-2" id="buffer"></div>
+<form>
+  <div class="container col-md-10" style="border: solid; height: 700%">
+  
+  
+  <h3 class="inv col-md-5">Invoice # <input required="true" id="inv_number" class="d_input" type="text" placeholder="1234567890" minlength="10" maxlength="10"></h3>
+  <div class="col-md-3"></div>
+  
+
+  <p id="inv_name" class="inv col-md-4">
+    <input class="d_input" type="text" placeholder="First"/>
+    <input class="d_input" type="text" placeholder="Last"/>
+  </p>
+  
+  <p class="inv col-md-12">
+    <label for="date">Invoice Date</label>
+    <span id="inv_date_container">
+      <input id="m" maxlength="2" class="inv_date" type="text">/</input>
+      <input id="d" maxlength="2" class="inv_date" type="text">/</input>
+      <input id="y" maxlength="4" class="inv_date" type="text"></input>
+    </span>
+  </p>
+
+
+  <table class="col-md-11">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr id="cloner" style="display: none">
+        <td class="product_order">1</td>
+        <td class="productname"><input class="productsearch" type="text" placeholder="Product" /></td>
+        <td class="productprice"></td>
+        <td class="productquanity"><input onchange="updatePrice(this);" type="hidden" value="1"/></td>
+        <td class="producttotal" onchange="updatetaxandtotal();"></td>
+      </tr>
+
+
+      <tr>
+        <td class="product_order">1</td>
+        <td class="productname"><input class="productsearch" type="text" placeholder="Product" /></td>
+        <td class="productprice"></td>
+        <td class="productquanity"><input onchange="updatePrice(this);" type="hidden" value="1"/></td>
+        <td class="producttotal" onchange="updatetaxandtotal();"></td>
+      </tr>
+      <tr id="beforeInsert" class="invis">
+        <td class="invis"><a onclick="newRow();">+</a></td>
+        <td class="invis"></td>
+        <td class="invis"></td>
+        <td class="invis"></td>
+        <td id="tax">Tax: $0.00</td>
+      </tr>
+      <tr class="invis">
+        <td class="invis"></td>
+        <td class="invis"></td>
+        <td class="invis"></td>
+        <td class="invis"></td>
+        <td id="grandtotal">$0.00</td>
+    </tbody>
+  </table>
+
+  <input id="createbtn" tabindex="1" class="form-control" type="submit" value="Create" method="post" action="" enctype="multipart/form-data"></input>
+  <button id="svbtn" onclick="return saveInv();"  class="form-control" color="white">Save</button> 
+
+</div>
+</form>
+
+
+
+</div>  
+
+
+
+
+{% endblock %}

@@ -1,0 +1,107 @@
+#create_Inv {
+	color: #c0392b;
+}
+
+#savedWell {
+	display: none;
+	padding-right: 3%;
+}
+
+#savedWell li {
+	list-style-type: none;
+}
+
+.divider {
+	height: 1px;
+	margin: 9px 0;
+	overflow: hidden;
+	background-color: #e5e5e5
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 20px;
+}
+.footer {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 20px;
+
+}
+
+#inv {
+	display: inline;
+	margin-top: 10px;
+}
+
+#inv_name {
+	float: right;
+	margin-top: 30px;
+}
+
+.d_input {
+	border: none;
+	border-bottom: thin solid;
+}
+
+#inv_date_container {
+	border-bottom: thin solid;
+}
+
+.inv_date {
+	border: none;
+}
+
+#d,#m {
+	width: 20px;
+	height: 17px;
+}
+
+#y {
+	width: 35px;
+	height: 17px;
+}
+
+table, th, td {
+	border: thin solid;
+}
+
+table {
+	border-bottom: none;
+	border-left: none;
+}
+
+.ui-autocomplete {
+	border: thin solid;
+}
+
+.ui-state-focus {
+	background-color: lightblue;
+	border: thin solid;
+}
+
+.invis {
+	border: none;
+}
+
+#createbtn {
+	width: 15%;
+	display: inline;
+	float: right;
+	margin-right: 10%;
+	margin-top: 5%;
+	background-color: #c0392b;
+	color: white;
+}
+
+#svbtn {
+	width: 15%;
+	background-color: #c0392b;
+	color: white;
+	float: left;
+	margin-top: 30%;
+}
+
